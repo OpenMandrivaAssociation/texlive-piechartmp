@@ -1,3 +1,9 @@
+# revision 19440
+# category Package
+# catalog-ctan /graphics/metapost/contrib/macros/piechartmp
+# catalog-date 2007-01-13 20:56:44 +0100
+# catalog-license lppl
+# catalog-version 0.3.0
 Name:		texlive-piechartmp
 Version:	0.3.0
 Release:	1
@@ -49,6 +55,7 @@ charts from the same data.
 %doc %{_texmfdistdir}/doc/metapost/piechartmp/examples/wec.mp
 %doc %{_texmfdistdir}/doc/metapost/piechartmp/examples/wec.pdf
 %doc %{_texmfdistdir}/doc/metapost/piechartmp/examples/worldmap.jpg
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,3 +66,5 @@ charts from the same data.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
