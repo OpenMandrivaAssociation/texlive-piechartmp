@@ -1,18 +1,12 @@
-# revision 19440
-# category Package
-# catalog-ctan /graphics/metapost/contrib/macros/piechartmp
-# catalog-date 2007-01-13 20:56:44 +0100
-# catalog-license lppl
-# catalog-version 0.3.0
 Name:		texlive-piechartmp
-Version:	0.3.0
-Release:	11
+Version:	19440
+Release:	1
 Summary:	Draw pie-charts using MetaPost
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/piechartmp
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/piechartmp.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/piechartmp.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/piechartmp.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/piechartmp.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ segments of the chart, thus creating the possibility of several
 charts from the same data.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -49,24 +43,10 @@ charts from the same data.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.3.0-2
-+ Revision: 754903
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.3.0-1
-+ Revision: 719259
-- texlive-piechartmp
-- texlive-piechartmp
-- texlive-piechartmp
-- texlive-piechartmp
-
