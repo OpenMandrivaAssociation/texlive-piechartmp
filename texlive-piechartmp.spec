@@ -1,6 +1,6 @@
 Name:		texlive-piechartmp
 Version:	19440
-Release:	1
+Release:	2
 Summary:	Draw pie-charts using MetaPost
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/piechartmp
