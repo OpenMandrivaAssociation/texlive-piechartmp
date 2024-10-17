@@ -3,7 +3,7 @@ Version:	19440
 Release:	2
 Summary:	Draw pie-charts using MetaPost
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/piechartmp
+URL:		https://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/piechartmp
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/piechartmp.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/piechartmp.doc.r%{version}.tar.xz
